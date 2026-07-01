@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rental Marketplace - Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="dashboard">
+  <div class="page-shell">
+    <header class="topbar">
+      <div>
+        <div class="brand">
+          <h1>Rental Marketplace</h1>
+          <p>View revenue and rental performance.</p>
+        </div>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="auth.html">Auth</a>
+          <a href="upload.html">Upload</a>
+          <a href="cart.html">Cart</a>
+          <a href="dashboard.html">Dashboard</a>
+        </nav>
+      </div>
+      <div class="auth-status">
+        <span id="nav-user">Not signed in</span>
+        <button id="sign-out-nav" class="secondary hidden">Sign Out</button>
+      </div>
+    </header>
+
+    <section class="card dashboard-card">
+      <h2>Platform Earnings</h2>
+      <div class="dashboard-row"><span>Total rentals:</span><strong id="dashboard-orders">0</strong></div>
+      <div class="dashboard-row"><span>Gross revenue:</span><strong id="dashboard-revenue">₹0</strong></div>
+      <div class="dashboard-row"><span>Platform commission:</span><strong id="dashboard-commission">₹0</strong></div>
+      <div class="dashboard-row"><span>Vendor payout:</span><strong id="dashboard-payout">₹0</strong></div>
+      <div class="message">Dashboard loads live data from the Supabase orders table.</div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

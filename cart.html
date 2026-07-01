@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rental Marketplace - Cart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="cart">
+  <div class="page-shell">
+    <header class="topbar">
+      <div>
+        <div class="brand">
+          <h1>Rental Marketplace</h1>
+          <p>Review your cart and checkout.</p>
+        </div>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="auth.html">Auth</a>
+          <a href="upload.html">Upload</a>
+          <a href="cart.html">Cart</a>
+          <a href="dashboard.html">Dashboard</a>
+        </nav>
+      </div>
+      <div class="auth-status">
+        <span id="nav-user">Not signed in</span>
+        <button id="sign-out-nav" class="secondary hidden">Sign Out</button>
+      </div>
+    </header>
+
+    <section class="card" id="cart-panel">
+      <h2>Your Cart</h2>
+      <div id="cart-empty">Add items to cart from Home before checking out.</div>
+      <div id="cart-items"></div>
+      <div id="cart-summary" class="hidden">
+        <div class="cart-row"><span>Total items:</span><span id="cart-count">0</span></div>
+        <div class="cart-row"><span>Subtotal:</span><span id="cart-subtotal">₹0</span></div>
+        <div class="cart-row"><span>Payment option:</span></div>
+        <label><input type="radio" name="payment-type" value="full" checked /> 100% Advance</label>
+        <label><input type="radio" name="payment-type" value="50-50" /> 50-50 Split</label>
+        <label><input type="radio" name="payment-type" value="upi" /> UPI Payment</label>
+        <div class="payment-method-group">
+          <label for="payment-method">Payment method</label>
+          <select id="payment-method">
+            <option value="upi">UPI</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <label class="terms-checkbox"><input type="checkbox" id="damage-policy" /> I accept full renter liability for damage, loss, or late return.</label>
+        <button id="checkout-button" class="primary wide">Confirm Rental</button>
+        <div id="checkout-message" class="message"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

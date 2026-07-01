@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rental Marketplace - Upload</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="upload">
+  <div class="page-shell">
+    <header class="topbar">
+      <div>
+        <div class="brand">
+          <h1>Rental Marketplace</h1>
+          <p>Upload a product for rent.</p>
+        </div>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="auth.html">Auth</a>
+          <a href="upload.html">Upload</a>
+          <a href="cart.html">Cart</a>
+          <a href="dashboard.html">Dashboard</a>
+        </nav>
+      </div>
+      <div class="auth-status">
+        <span id="nav-user">Not signed in</span>
+        <button id="sign-out-nav" class="secondary hidden">Sign Out</button>
+      </div>
+    </header>
+
+    <section class="card" id="upload-panel">
+      <h2>Add Inventory</h2>
+      <form id="vendor-form" class="vendor-form">
+        <label for="product-name">Item Name</label>
+        <input id="product-name" required placeholder="T-shirt, Bike, Camera" />
+
+        <label for="product-file">Upload image from device</label>
+        <input id="product-file" type="file" accept="image/*" required />
+
+        <label for="product-description">Description</label>
+        <textarea id="product-description" required rows="3" placeholder="Short item description..."></textarea>
+
+        <div class="grid-two">
+          <div>
+            <label for="product-hourly">Hourly rate</label>
+            <input id="product-hourly" type="number" min="0" step="1" required placeholder="199" />
+          </div>
+          <div>
+            <label for="product-daily">Daily rate</label>
+            <input id="product-daily" type="number" min="0" step="1" required placeholder="999" />
+          </div>
+        </div>
+
+        <label class="checkbox-inline"><input id="product-company" type="checkbox" /> Company owned item</label>
+        <button type="submit" class="primary wide">Add Inventory Item</button>
+        <div id="vendor-message" class="message"></div>
+      </form>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
+  <script src="main.js"></script>
+  <script src="upload.js"></script>
+</body>
+</html>

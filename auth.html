@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rental Marketplace - Auth</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="auth">
+  <div class="page-shell">
+    <header class="topbar">
+      <div>
+        <div class="brand">
+          <h1>Rental Marketplace</h1>
+          <p>Sign in or sign up to start renting.</p>
+        </div>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="auth.html">Auth</a>
+          <a href="upload.html">Upload</a>
+          <a href="cart.html">Cart</a>
+          <a href="dashboard.html">Dashboard</a>
+        </nav>
+      </div>
+      <div class="auth-status">
+        <span id="nav-user">Not signed in</span>
+        <button id="sign-out-nav" class="secondary hidden">Sign Out</button>
+      </div>
+    </header>
+
+    <section class="card auth-card" id="auth-card">
+      <h2>Sign in / Sign up</h2>
+      <div class="form-grid">
+        <div>
+          <label for="auth-email">Email address</label>
+          <input id="auth-email" type="email" placeholder="you@example.com" />
+          <button id="email-signin" class="primary">Send Email Link</button>
+        </div>
+        <div>
+          <label for="auth-phone">Mobile number</label>
+          <input id="auth-phone" type="tel" placeholder="+1234567890" />
+          <button id="phone-signin" class="primary">Send Phone Link</button>
+        </div>
+      </div>
+      <div class="divider">OR</div>
+      <button id="google-signin" class="primary wide">Login with Google</button>
+      <p class="help-text">Supabase Auth handles sign-in. After first login, your profile is synced to the SQL table.</p>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
+  <script src="main.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>

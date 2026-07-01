@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rental Marketplace</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="index">
+  <div class="page-shell">
+    <header class="topbar">
+      <div>
+        <div class="brand">
+          <h1>Rental Marketplace</h1>
+          <p>Rent gear by the hour or day.</p>
+        </div>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="auth.html">Auth</a>
+          <a href="upload.html">Upload</a>
+          <a href="cart.html">Cart</a>
+          <a href="dashboard.html">Dashboard</a>
+        </nav>
+      </div>
+      <div class="auth-status">
+        <span id="nav-user">Not signed in</span>
+        <button id="sign-out-nav" class="secondary hidden">Sign Out</button>
+      </div>
+    </header>
+
+    <section class="card wide" id="product-section">
+      <div class="section-header">
+        <h2>Available Rentals</h2>
+        <span id="product-count">0 items</span>
+      </div>
+      <div id="product-list" class="product-list"></div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
